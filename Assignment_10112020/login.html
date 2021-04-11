@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="icon/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src = "js/login.js"></script>
+</head>
+<body>
+	<body>
+	<div class="container-fluid background">
+		<div class="row justify-content-center">
+			<div class="col-md-4 col-sm-6 col-xs-12 row-container formlogin">
+				<form method="post" id = "formLogin">
+					<h2 class="text-center">LOGIN</h2>
+					<div class="form-group">
+						<div class="message" id = "message">
+							Login account is incorect !
+						</div>
+					</div>
+					<div class="form-group">
+						<label><i class="fas fa-user"></i> Username</label>
+						<input type="text" class="form-control" placeholder="Enter your username" id = "username" 
+						name="">
+						<div id="user_mess" class="text-danger"></div>
+					</div>
+					<div class="form-group">
+						<label><i class="fas fa-lock"></i> Password</label>
+						<input type="password" class="form-control" placeholder="Enter your password" id = "password" 
+						name="">
+						<div id="pass_mess" class="text-danger"></div>
+					</div>
+					<div class="form-group form-check">
+					    <label class="form-check-label">
+					      <input class="form-check-input" type="checkbox"> Remember
+					    </label>
+					</div>
+					<button type="button" class="btn btn-success btn-block my-3" onclick="submitForm()"><i class="fas fa-sign-in-alt"></i> Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
