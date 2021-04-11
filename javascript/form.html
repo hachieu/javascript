@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script type="text/javascript">
+		function formSubmit(event) {
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+
+			if(email.length > 0 && password.length > 0)
+			{
+				document.getElementById("show").innerHTML = email+ " - "+password;
+			}
+			
+			handleEmail();
+			handlePassword()
+
+			// event.preventDefault();
+		}
+
+		function handleEmail(){
+			var email = document.getElementById("email").value;
+
+			if(email.length == ""){
+				document.getElementById("mess1").innerHTML = "Please enter your email !";
+				document.getElementById("mess1").style.color = "red";
+			}
+			else{
+				document.getElementById("mess1").innerHTML = "Ok";
+				document.getElementById("mess1").style.color = "green";
+			}
+		}
+
+		function handlePassword(){
+			var password = document.getElementById("password").value;
+
+			if(password.length == ""){
+				document.getElementById("mess2").innerHTML = "Please enter your password !";
+				document.getElementById("mess2").style.color = "red";
+			}
+			else{
+				document.getElementById("mess2").innerHTML = "Ok";
+				document.getElementById("mess2").style.color = "green";
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<form action="" class="col-sm-6 row-container">
+				<div class="form-group">
+				<label for="email">Email address:</label>
+				    <input type="email" class="form-control" placeholder="Enter email" id="email" onclick="handleEmail()">
+				    <div id = "mess1"></div>
+				</div>
+				<div class="form-group">
+				    <label for="pwd">Password:</label>
+				    <input type="password" class="form-control" placeholder="Enter password" id="password" onclick="handlePassword()">
+				    <div id = "mess2"></div>
+				</div>
+				  
+				<button type="button" class="btn btn-primary" onclick="formSubmit()">Submit</button>
+			</form>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-sm-6 row-container" id="show">
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

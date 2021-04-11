@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom</title>
+	<script type="text/javascript">
+		function clickFunction(argument) {
+			var vals = document.getElementsByTagName("div");
+			document.getElementById("result").innerHTML = vals[0].innerHTML;
+		}
+
+	</script>
+</head>
+<body>
+	<div>
+		Have you ever !
+	</div>
+	
+	<button type="button" onclick="clickFunction()">Show</button>
+
+	<div id="result"></div>
+</body>
+</html>
